@@ -33,29 +33,34 @@ function update() {
   var text = el.value.toLowerCase();
   text = text.replace(/[^a-z \n]/g, "");
   if (text.length > 0) {
-    el.value = text.toUpperCase();
     var lines = text.split("\n");
     var contents = "";
     var maxWidth = 0;
+    var layers = ["", "glow"];
     for (var l = 0; l < lines.length; l++) {
-      contents += '<div class="line">';
-      var width = 0;
-      var chars = lines[l].trim().split("");
-      for (var c = 0; c < chars.length; c++) {
-        var char = chars[c];
-        if (char == " ") {
-          contents += '<div class="letter letter--space">&nbsp;</div>';
+      for (var i = 0; i < layers.length; i++) {
+        if (layers[i] == "") {
+          contents += '<div class="line">';
         } else {
-          contents +=
-            '<div class="letter letter--' + char + '">' + char + "</div>";
+          contents += '<div class="line line--' + layers[i] + '">';
         }
-        console.log();
-        width += letters[char].width;
+        var width = 0;
+        var chars = lines[l].split("");
+        for (var c = 0; c < chars.length; c++) {
+          var char = chars[c];
+          if (char == " ") {
+            contents += '<div class="letter letter--space">&nbsp;</div>';
+          } else {
+            contents +=
+              '<div class="letter letter--' + char + '">' + char + "</div>";
+          }
+          width += letters[char].width;
+        }
+        if (width > maxWidth) {
+          maxWidth = width;
+        }
+        contents += "</div>";
       }
-      if (width > maxWidth) {
-        maxWidth = width;
-      }
-      contents += "</div>";
     }
     var container = document.querySelector(".lines");
     container.innerHTML = contents;
@@ -96,8 +101,8 @@ function addRule(text) {
 }
 
 window.onload = function() {
-  update();
   var styleEl = document.createElement("style");
   document.head.appendChild(styleEl);
   sheet = styleEl.sheet;
+  update();
 };

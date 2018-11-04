@@ -14,16 +14,19 @@
   <main>
     <div class="brick"></div>
     <div class="brick-color"></div>
-    <div class="lines"></div>
+    <div class="lines">
+    </div>
     <div class="guy"></div>
   </main>
   <footer>
     <textarea class="input" onkeyup="update()">BALLOONS
 FOR SALE</textarea>
-<br>
-<label>balloon color: <input class="balloonButton jscolor" onchange="updateColor('balloons', this.jscolor)" data-jscolor="{value: 'e9bf27', closable: true}"></label>
-<br>
-<label>wall color: <input class="wallButton jscolor" onchange="updateColor('wall', this.jscolor)" data-jscolor="{value: '00aa77', closable: true}"></label>
+    <div class="controls">
+      <label><span>balloon color:</span><input class="balloonButton jscolor" onchange="updateColor('balloons', this.jscolor)"
+          data-jscolor="{value: 'e9bf27', closable: true}"></label>
+      <label><span>wall color:</span><input class="wallButton jscolor" onchange="updateColor('wall', this.jscolor)" data-jscolor="{value: '00aa77', closable: true}"></label>
+
+    </div>
   </footer>
   <script src="https://button.glitch.me/button.js"></script>
   <script src="/-/jscolor.js"></script>
