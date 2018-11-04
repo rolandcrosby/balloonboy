@@ -1,0 +1,269 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.input {
+  font-size: inherit;
+  width: 300px;
+  height: 40px;
+}
+
+.glitchButton {
+  float: right;
+  margin: 10px;
+}
+
+main {
+  width: 600px;
+  height: 500px;
+  position: relative;
+}
+
+.lines {
+  transform-origin: top left;
+  position: absolute;
+  min-width: 580px;
+  margin: 10px;
+}
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 103px;
+}
+
+.letter {
+  background-repeat: no-repeat;
+  background-color: rgba(233, 191, 39, 0.658);
+  background-blend-mode: overlay;
+  background-clip: content-box;
+  color: transparent;
+}
+
+.brick,
+.brick-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.brick {
+  background: #0a7 url("/-/brick.jpg") top left repeat;
+  background-size: 70%;
+  background-blend-mode: overlay;
+}
+
+.brick-color {
+  mix-blend-mode: multiply;
+}
+
+.guy {
+  background: transparent url("/-/guy.png") top left no-repeat;
+  width: 131px;
+  height: 399px;
+  position: absolute;
+  bottom: 0;
+  left: 240px;
+  transform: scale(0.8);
+  transform-origin: center bottom;
+}
+
+.letter--a {
+  background-image: url(/-/letters/a.png);
+  mask-image: url(/-/letters/a.png);
+  -webkit-mask-image: url(/-/letters/a.png);
+  width: 92px;
+  height: 102px;
+}
+.letter--b {
+  background-image: url(/-/letters/b.png);
+  mask-image: url(/-/letters/b.png);
+  -webkit-mask-image: url(/-/letters/b.png);
+  width: 70px;
+  height: 95px;
+}
+.letter--c {
+  background-image: url(/-/letters/c.png);
+  mask-image: url(/-/letters/c.png);
+  -webkit-mask-image: url(/-/letters/c.png);
+  width: 80px;
+  height: 100px;
+}
+.letter--d {
+  background-image: url(/-/letters/d.png);
+  mask-image: url(/-/letters/d.png);
+  -webkit-mask-image: url(/-/letters/d.png);
+  width: 78px;
+  height: 100px;
+}
+.letter--e {
+  background-image: url(/-/letters/e.png);
+  mask-image: url(/-/letters/e.png);
+  -webkit-mask-image: url(/-/letters/e.png);
+  width: 59px;
+  height: 92px;
+}
+.letter--f {
+  background-image: url(/-/letters/f.png);
+  mask-image: url(/-/letters/f.png);
+  -webkit-mask-image: url(/-/letters/f.png);
+  width: 59px;
+  height: 96px;
+}
+.letter--g {
+  background-image: url(/-/letters/g.png);
+  mask-image: url(/-/letters/g.png);
+  -webkit-mask-image: url(/-/letters/g.png);
+  width: 88px;
+  height: 104px;
+}
+.letter--h {
+  background-image: url(/-/letters/h.png);
+  mask-image: url(/-/letters/h.png);
+  -webkit-mask-image: url(/-/letters/h.png);
+  width: 84px;
+  height: 101px;
+}
+.letter--i {
+  background-image: url(/-/letters/i.png);
+  mask-image: url(/-/letters/i.png);
+  -webkit-mask-image: url(/-/letters/i.png);
+  width: 30px;
+  height: 96px;
+}
+.letter--j {
+  background-image: url(/-/letters/j.png);
+  mask-image: url(/-/letters/j.png);
+  -webkit-mask-image: url(/-/letters/j.png);
+  width: 69px;
+  height: 94px;
+}
+.letter--k {
+  background-image: url(/-/letters/k.png);
+  mask-image: url(/-/letters/k.png);
+  -webkit-mask-image: url(/-/letters/k.png);
+  width: 89px;
+  height: 100px;
+}
+.letter--l {
+  background-image: url(/-/letters/l.png);
+  mask-image: url(/-/letters/l.png);
+  -webkit-mask-image: url(/-/letters/l.png);
+  width: 64px;
+  height: 96px;
+}
+.letter--m {
+  background-image: url(/-/letters/m.png);
+  mask-image: url(/-/letters/m.png);
+  -webkit-mask-image: url(/-/letters/m.png);
+  width: 83px;
+  height: 97px;
+}
+.letter--n {
+  background-image: url(/-/letters/n.png);
+  mask-image: url(/-/letters/n.png);
+  -webkit-mask-image: url(/-/letters/n.png);
+  width: 81px;
+  height: 96px;
+}
+.letter--o {
+  background-image: url(/-/letters/o.png);
+  mask-image: url(/-/letters/o.png);
+  -webkit-mask-image: url(/-/letters/o.png);
+  width: 84px;
+  height: 93px;
+}
+.letter--p {
+  background-image: url(/-/letters/p.png);
+  mask-image: url(/-/letters/p.png);
+  -webkit-mask-image: url(/-/letters/p.png);
+  width: 72px;
+  height: 90px;
+}
+.letter--q {
+  background-image: url(/-/letters/q.png);
+  mask-image: url(/-/letters/q.png);
+  -webkit-mask-image: url(/-/letters/q.png);
+  width: 92px;
+  height: 103px;
+}
+.letter--r {
+  background-image: url(/-/letters/r.png);
+  mask-image: url(/-/letters/r.png);
+  -webkit-mask-image: url(/-/letters/r.png);
+  width: 79px;
+  height: 96px;
+}
+.letter--s {
+  background-image: url(/-/letters/s.png);
+  mask-image: url(/-/letters/s.png);
+  -webkit-mask-image: url(/-/letters/s.png);
+  width: 69px;
+  height: 101px;
+}
+.letter--t {
+  background-image: url(/-/letters/t.png);
+  mask-image: url(/-/letters/t.png);
+  -webkit-mask-image: url(/-/letters/t.png);
+  width: 86px;
+  height: 100px;
+}
+.letter--u {
+  background-image: url(/-/letters/u.png);
+  mask-image: url(/-/letters/u.png);
+  -webkit-mask-image: url(/-/letters/u.png);
+  width: 76px;
+  height: 96px;
+}
+.letter--v {
+  background-image: url(/-/letters/v.png);
+  mask-image: url(/-/letters/v.png);
+  -webkit-mask-image: url(/-/letters/v.png);
+  width: 91px;
+  height: 95px;
+}
+.letter--w {
+  background-image: url(/-/letters/w.png);
+  mask-image: url(/-/letters/w.png);
+  -webkit-mask-image: url(/-/letters/w.png);
+  width: 88px;
+  height: 90px;
+}
+.letter--x {
+  background-image: url(/-/letters/x.png);
+  mask-image: url(/-/letters/x.png);
+  -webkit-mask-image: url(/-/letters/x.png);
+  width: 90px;
+  height: 84px;
+}
+.letter--y {
+  background-image: url(/-/letters/y.png);
+  mask-image: url(/-/letters/y.png);
+  -webkit-mask-image: url(/-/letters/y.png);
+  width: 85px;
+  height: 92px;
+}
+.letter--z {
+  background-image: url(/-/letters/z.png);
+  mask-image: url(/-/letters/z.png);
+  -webkit-mask-image: url(/-/letters/z.png);
+  width: 80px;
+  height: 91px;
+}
+.letter.letter--space {
+  width: 30px;
+  height: 91px;
+  background: transparent !important;
+}

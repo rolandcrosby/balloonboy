@@ -1,0 +1,16 @@
+{
+  "name": "balloonboy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Roland Crosby <roland@rolandcrosby.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

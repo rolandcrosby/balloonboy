@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Balloon Boy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/-/style.css" />
+</head>
+
+<body>
+  <div class="glitchButton"></div>
+  <main>
+    <div class="brick"></div>
+    <div class="brick-color"></div>
+    <div class="lines"></div>
+    <div class="guy"></div>
+  </main>
+  <footer>
+    <textarea class="input" onkeyup="update()">BALLOONS
+FOR SALE</textarea>
+<br>
+<label>balloon color: <input class="balloonButton jscolor" onchange="updateColor('balloons', this.jscolor)" data-jscolor="{value: 'e9bf27', closable: true}"></label>
+<br>
+<label>wall color: <input class="wallButton jscolor" onchange="updateColor('wall', this.jscolor)" data-jscolor="{value: '00aa77', closable: true}"></label>
+  </footer>
+  <script src="https://button.glitch.me/button.js"></script>
+  <script src="/-/jscolor.js"></script>
+  <script src="/-/client.js"></script>
+</body>
+
+</html>
